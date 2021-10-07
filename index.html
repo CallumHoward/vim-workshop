@@ -1,40 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <style>
+      #comparison-list {
+        font-size: 1.5rem;
+      }
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      iframe {
+        border: 1px solid white;
+      }
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+      #stackoverflow-developer-survey-frame {
+        height: 600px;
+        width: 600px;
+
+        -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: center;
+        -o-transform: scale(0.75);
+        -o-transform-origin: center;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: center;
+      }
+
+      #so-caption {
+        font-size: 1.5rem;
+      }
+    </style>
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="r-fit-text">CSESoc Vim Workshop</h1>
+          <p>With Callum Howard</p>
+        </section>
+
+        <section>
+          <iframe
+            width="620"
+            height="508"
+            src="https://strawpoll.com/embed/bhopkx293"
+            style="width: 100%; height: 508px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </section>
+
+        <section>
+          <iframe
+            width="620"
+            height="800"
+            src="https://strawpoll.com/embed/41325w4yf"
+            style="width: 100%; height: 800px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2>What is Vim?</h2>
+          <img height="180px" alt="Vim" src="assets/vim-icon.png" />
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2>What is Vim?</h2>
+          <p class="fragment fade-up">A Text Editor!</p>
+          <div class="r-stack">
+            <a href="assets/assets/hello.mov" target="_blank">
+              <video autoplay
+                class="fragment fade-in-then-out"
+                alt="vim-simple"
+                style="max-height: 450px"
+              >
+                <source src="assets/hello.mov" type="video/mp4" />
+              </video>
+            </a>
+            <a href="assets/vim-powerful.jpg" target="_blank">
+              <img
+                class="fragment fade"
+                alt="vim-powerful"
+                src="assets/vim-powerful.jpg"
+                style="max-height: 450px"
+              />
+            </a>
+          </div>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2>What is Vim?</h2>
+          <div class="fragment">
+            <p id="so-caption">StackOverflow Developer Survey 2021</p>
+            <iframe
+              id="stackoverflow-developer-survey-frame"
+              data-src="https://insights.stackoverflow.com/survey/2021#most-popular-technologies-new-collab-tools"
+              data-preload
+            ></iframe>
+          </div>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2>Why use Vim?</h2>
+          <ul style="list-style-type: none">
+            <li class="fragment fade-up">➕ Can run in Terminal 💻</li>
+            <li class="fragment fade-up">➕ Can run over SSH 🔗</li>
+            <li class="fragment fade-up">
+              ➕ Designed for fast mouse-less editing 🖱️
+            </li>
+            <li class="fragment fade-up">➕ Performance ⏱️</li>
+            <li class="fragment fade-up">➕ Extendable with plugins 🔌</li>
+            <li class="fragment fade-up">➖ Learning curve 📈</li>
+            <li class="fragment fade-up">➖ Configuration time ⚙️</li>
+          </ul>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <!-- <p>Why would I use it instead of VSCode?</p> -->
+
+          <aside class="notes">
+            <ul>
+              <li>
+                So it's not a super clear cut decision, honestly both are great
+                options.
+              </li>
+              <li>
+                One notable bonus is that you can use Vim in the exam
+                environment.
+              </li>
+            </ul>
+          </aside>
+
+          <div id="comparison-list" class="r-hstack r-stretch">
+            <div class="r-vstack">
+              <img height="90px" alt="Vim" src="assets/vim-icon.png" />
+              <ul style="list-style-type: none">
+                <li>➕ Can run in Terminal 💻</li>
+                <li>➕ Can run over SSH 🔗</li>
+                <li>➕ Designed for fast mouse-less editing 🖱️</li>
+                <li>➕ Performance ⏱️</li>
+                <li>➕ Extendable with plugins 🔌</li>
+                <li>➖ Learning curve 📈</li>
+                <li>➖ Configuration time ⚙️</li>
+              </ul>
+            </div>
+            <div class="r-vstack">
+              <img height="90px" alt="Vim" src="assets/vscode-icon.png" />
+              <ul style="list-style-type: none">
+                <li class="fragment fade-up">
+                  ➖ Can’t run in terminal 😢
+                  <ul class="fragment fade-up">
+                    <li>but has integrated terminal 😅</li>
+                  </ul>
+                </li>
+                <li class="fragment fade-up">
+                  ➕ Can edit remote files through SSH 🔗
+                </li>
+                <li class="fragment fade-up">
+                  ➕ Easy to use out of the box 📦
+                </li>
+                <li class="fragment fade-up">➕ Easy to configure ⚙️</li>
+                <li class="fragment fade-up">➕ Extendable with plugins 🔌</li>
+                <li class="fragment fade-up">➕ Has Vim plugin 🥳</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <blockquote>
+            Vim allows me to treat programming like a video game
+          </blockquote>
+          <img
+            alt="street-fighter"
+            src="assets/street-fighter.png"
+            style="max-height: 200px"
+          />
+          <img
+            alt="konami-code"
+            src="assets/konami-code.png"
+            style="max-width: 500px"
+          />
+        </section>
+
+        <section>
+          <h2>Slide 1</h2>
+          <iframe
+            data-src="http://localhost:3000/vim.html"
+            data-preload
+            width="600px"
+            height="500px"
+          ></iframe>
+        </section>
+
+        <section>Slide 2</section>
+
+        <section>
+          <h2>Slide 3</h2>
+          <iframe
+            data-src="http://localhost:3000/vim.html"
+            data-preload
+            width="600px"
+            height="500px"
+          ></iframe>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
