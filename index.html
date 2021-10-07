@@ -83,7 +83,8 @@
           <p class="fragment fade-up">A Text Editor!</p>
           <div class="r-stack">
             <a href="assets/assets/hello.mov" target="_blank">
-              <video autoplay
+              <video
+                autoplay
                 class="fragment fade-in-then-out"
                 alt="vim-simple"
                 style="max-height: 450px"
@@ -232,6 +233,29 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
+
+        multiplex: {
+          // Example values. To generate your own, see the socket.io server instructions.
+          secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
+          id: "98d58d941f467819", // Obtained from socket.io server
+          url: "http://http://111.220.134.200:1948/", // Location of socket.io server
+        },
+
+        // Don't forget to add the dependencies
+        dependencies: [
+          {
+            src: "http://http://111.220.134.200:1948/socket.io/socket.io.js",
+            async: true,
+          },
+          { src: "https://unpkg.com/reveal-multiplex/client.js", async: true },
+        ],
+
+          // and if you want speaker notes
+          {
+            src: "https://unpkg.com/reveal-notes-server/client.js",
+            async: true,
+          },
+        ],
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes],
