@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <link rel="icon" href="assets/favicon-228_x_228.png" sizes="228x228">
+    <link rel="icon" href="assets/favicon-228_x_228.png" sizes="228x228" />
 
     <title>Vim Workshop</title>
 
@@ -66,6 +66,13 @@
         <section>
           <h1 class="r-fit-text">CSESoc Vim Workshop</h1>
           <p>With Callum Howard</p>
+          <br />
+          <br />
+          <p>
+            <a href="https://www.callumhoward.com/vim-workshop/"
+              >www.callumhoward.com/vim-workshop/</a
+            >
+          </p>
         </section>
 
         <section>
@@ -102,6 +109,7 @@
             <a href="assets/hello.mov" target="_blank">
               <video
                 autoplay
+                loop
                 class="fragment fade-in-then-out"
                 alt="vim-simple"
                 style="max-height: 450px"
@@ -136,6 +144,9 @@
           <h2>Why use Vim?</h2>
           <ul style="list-style-type: none">
             <li class="fragment fade-up">➕ Can run in Terminal 💻</li>
+            <li class="fragment fade-up">
+              ➕ Comes built-in on Linux/macOS 😃
+            </li>
             <li class="fragment fade-up">➕ Can run over SSH 🔗</li>
             <li class="fragment fade-up">
               ➕ Designed for fast mouse-less editing 🖱️
@@ -152,6 +163,7 @@
 
           <aside class="notes">
             <ul>
+              <li>Why would I use it instead of VSCode?</li>
               <li>
                 So it's not a super clear cut decision, honestly both are great
                 options.
@@ -168,6 +180,7 @@
               <img height="90px" alt="Vim" src="assets/vim-icon.png" />
               <ul style="list-style-type: none">
                 <li>➕ Can run in Terminal 💻</li>
+                <li>➕ Comes built-in on Linux/macOS 😃</li>
                 <li>➕ Can run over SSH 🔗</li>
                 <li>➕ Designed for fast mouse-less editing 🖱️</li>
                 <li>➕ Performance ⏱️</li>
@@ -189,6 +202,9 @@
                   ➕ Can edit remote files through SSH 🔗
                 </li>
                 <li class="fragment fade-up">
+                  ➖ Requires mouse for some things 🖱️
+                </li>
+                <li class="fragment fade-up">
                   ➕ Easy to use out of the box 📦
                 </li>
                 <li class="fragment fade-up">➕ Easy to configure ⚙️</li>
@@ -199,7 +215,20 @@
           </div>
         </section>
 
+        <section>Why is "mouse-less" design a good thing?</section>
         <section>
+          <h1>Speed!</h1>
+          <br />
+          <p class="fragment fade-up">Let's take a look...</p>
+        </section>
+
+        <section>
+          <aside class="notes">
+            <ul>
+              <li>Put in the right combos to execute moves quickly</li>
+            </ul>
+          </aside>
+
           <blockquote>
             Vim allows me to treat programming like a video game
           </blockquote>
@@ -216,25 +245,135 @@
         </section>
 
         <section>
-          <h2>Slide 1</h2>
-          <iframe
-            data-src="vimjs/vim.html"
-            data-preload
-            width="600px"
-            height="500px"
-          ></iframe>
+          <h1>Modal editing</h1>
+          <aside class="notes">
+            <ul>
+              <li>
+                Vim is a modal editor. That just means it has some different
+                modes!
+              </li>
+              <li>In Normal Mode, every key is a shortcut.</li>
+              <li>
+                In Insert Mode, you can insert text like in any other text
+                editor.
+              </li>
+              <li>In Visual Mode, you can select text.</li>
+            </ul>
+          </aside>
+          <ul>
+            <li class="fragment fade-up">
+              <b>Normal Mode</b>: every key is a shortcut
+            </li>
+            <li class="fragment fade-up"><b>Insert Mode</b>: insert text</li>
+            <li class="fragment fade-up"><b>Visual Mode</b>: select text</li>
+            <li class="fragment fade-up">
+              <b>Command Mode</b>: enter commands (like saving)
+            </li>
+          </ul>
         </section>
 
-        <section>Slide 2</section>
-
         <section>
-          <h2>Slide 3</h2>
+          Try it out
+          <p class="fragment fade-up">www.callumhoward.com/vim-workshop/</p>
+        </section>
+
+        <section
+          class="disable-keyboard"
+          data-auto-animate
+          data-auto-animate-unmatched="fade"
+        >
           <iframe
             data-src="vimjs/vim.html"
             data-preload
             width="600px"
             height="500px"
           ></iframe>
+          <div class="r-stack">
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Click above and move the cursor with the arrow keys
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              This is <b>Normal mode</b> (where keys are shortcuts)
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Try out these keys: <b>h</b>, <b>j</b>, <b>k</b>, <b>l</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              <b>h</b> is left, <b>j</b> is down, <b>k</b> is up, <b>l</b> is
+              right
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Try <b>e</b> to go to the <b>e</b>nd of a word
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Try <b>b</b> to go <b>b</b>ack a word
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              We can enter <b>I</b>nsert mode by pressing <b>i</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Try typing anything!
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              To exit Insert mode and return to Normal Mode, press <b>Escape</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              <b>U</b>ndo: <b>u</b>, <b>R</b>edo: <b>Ctrl + r</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              <b>Y</b>ank (copy) a line with <b>y</b>, <b>P</b>aste with
+              <b>p</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              We can enter <b>V</b>isual Select mode by pressing <b>v</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Try using <b>h</b>, <b>j</b>, <b>k</b>, <b>l</b> or the arrow keys
+              to make a selection
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 1.5rem">
+              You can <b>Y</b>ank (copy) the selection in Visual Select mode
+              with a single press of <b>y</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Just like before, we can <b>p</b>aste it after the cursor with
+              <b>p</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Search for text with <b>/</b>
+            </p>
+            <p class="fragment fade-in-then-out" style="font-size: 2rem">
+              Move between search results with <b>n</b> and <b>N</b>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <a href="https://www.callumhoward.com/vim-cheatsheet/">Cheatsheet link here!</a>
+          <!-- <iframe -->
+          <!--   src="https://github.com/CallumHoward/cli-tools/raw/master/vimcheatsheet.pdf#toolbar=0" -->
+          <!--   width="100%" -->
+          <!--   height="500px" -->
+          <!-- > -->
+          <!-- </iframe> -->
+        </section>
+
+        <section>
+          Configuring your Vim
+          <script src="https://gist.github.com/CallumHoward/6b14e03f2bbbcc6f902bcf0120b8e008.js"></script>
+        </section>
+
+        <section>
+          Neovim?
+        </section>
+
+        <section>
+          <h3>How do I do <i>xyz</i> in Vim?</h3>
+          <ul>
+            <li>Run this command: ":help search"</li>
+            <li>Google 🔎</li>
+            <li>Ask me!</li>
+          </ul>
         </section>
       </div>
     </div>
@@ -283,6 +422,15 @@
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealZoom, RevealNotes],
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        let currentSlide = event.currentSlide;
+        let disableKeyboard =
+          currentSlide.classList.contains("disable-keyboard");
+        Reveal.configure({ keyboard: !disableKeyboard });
+        console.log("disable-layout: ", disableKeyboard);
+        Reveal.sync();
       });
     </script>
   </body>
